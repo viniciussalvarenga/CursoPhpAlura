@@ -13,7 +13,6 @@ $umaconta = new conta(new exibircpf('518.249.428-93'), 'Vinícius');
 echo $umaconta->getCpf();
 echo $umaconta->getNome();
 $umaconta->depositar(500);
-$umaconta->depositar(700);
 echo $umaconta->exibirSaldo();
 
 echo "\n" . Conta::recuperaNumerodecontas();
