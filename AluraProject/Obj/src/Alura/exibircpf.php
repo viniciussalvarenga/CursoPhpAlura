@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Alura;
+
 class exibircpf
 {
     private string $cpf;
@@ -13,4 +15,6 @@ class exibircpf
     {
         return "$this->cpf";
     }
+
+
 }

@@ -1,18 +1,13 @@
 <?php
 
-require_once 'src/Alura/pessoa.php';
-require_once 'src/Alura/conta.php';
-require_once 'src/Alura/Titular.php';
-require_once 'src/Alura/cpf.php';
-require_once 'src/Alura/endereco.php';
-require_once 'src/Alura/funcionario.php';
+require_once 'autoload.php';
 
-$endereco = new endereco('Av. Salgado Filho', 'Guarulhos', 'Centro', '3119');
-$umaconta = new conta(new exibircpf('518.249.428-93'), 'Vinícius');
+$endereco = new \src\Alura\endereco('Av. Salgado Filho', 'Guarulhos', 'Centro', '3119');
+$umaconta = new \src\Alura\contapoupanca(new \src\Alura\exibircpf('123.456.789-10'), 'Vinícius');
+$outraconta = new \src\Alura\contacorrente(new \src\Alura\exibircpf('456.123.789-11'), 'Lua');
 
-echo $umaconta->getCpf();
-echo $umaconta->getNome();
-$umaconta->depositar(500);
-echo $umaconta->exibirSaldo();
+$umaconta -> depositar(1000);
+$umaconta -> transferir(200, $outraconta);
+echo $umaconta -> exibirSaldo();
 
-echo "\n" . Conta::recuperaNumerodecontas();
+echo "\n" . \src\Alura\conta::recuperaNumerodecontas();

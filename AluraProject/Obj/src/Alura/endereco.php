@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Alura;
+
 class endereco
 {
     private $rua;
@@ -15,18 +17,15 @@ class endereco
         $this->numero = $numero;
     }
 
-
     public function exibirRua()
     {
         return $this->rua . "\n";
     }
 
-
     public function exibirCidade()
     {
         return $this->cidade . "\n";
     }
-
 
     public function exibirBairro()
     {
@@ -37,6 +36,4 @@ class endereco
     {
         return $this->numero . "\n";
     }
-
-
 }

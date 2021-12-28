@@ -1,11 +1,13 @@
 <?php
 
+namespace src\Alura;
 
-class Conta extends pessoa
+abstract class conta extends pessoa
 {
 
-    private int $saldo;
+    protected int $saldo;
     private static int $numerodecontas = 0;
+
 
     public function __construct($cpf, $nome)
     {
@@ -19,20 +21,21 @@ class Conta extends pessoa
         self::$numerodecontas--;
     }
 
-    public function sacar(float $quantidade){
-    if ($quantidade > $this->saldo){
-        echo 'Saldo indisponível\n';
-    }
-
-    $this->saldo -= $quantidade;
-
-    return $this->saldo;
-
-    }
-
-    public function depositar(float $quantidadedeposito):float
+    public function sacar(float $quantidade)
     {
-        if($quantidadedeposito < 0){
+        if ($quantidade > $this->saldo) {
+            echo 'Saldo indisponível\n';
+        }
+
+        $this->saldo -= $quantidade;
+
+        return $this->saldo;
+
+    }
+
+    public function depositar(float $quantidadedeposito): float
+    {
+        if ($quantidadedeposito < 0) {
             echo 'Não é possível depositar valores negativos' . "\n";
         }
 
@@ -41,21 +44,13 @@ class Conta extends pessoa
         return $this->saldo;
     }
 
-    public function transferir(float $quantidadetransf, Conta $contadestino)
-    {
-        if($quantidadetransf > $this->saldo){
-            echo 'Você não possui saldo o suficiente'. "\n";
-            return;
-        }
 
-        $contadestino->saldo += $quantidadetransf;
-        $this->saldo -= $quantidadetransf;
-    }
+
 
     public function exibirSaldo()
     {
-        if (($this->saldo) > 0){
-            return $this->saldo  . "\n";
+        if (($this->saldo) > 0) {
+            return $this->saldo . "\n";
         }
         return null;
     }
@@ -66,6 +61,5 @@ class Conta extends pessoa
         return self::$numerodecontas;
     }
 
-
-
+    abstract function tarifa();
 }

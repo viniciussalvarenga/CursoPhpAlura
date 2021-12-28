@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Alura;
+
 class funcionario extends pessoa
 {
     private $cargo;
@@ -21,7 +23,4 @@ class funcionario extends pessoa
     {
         return $this->cargo;
     }
-
-
-
 }
