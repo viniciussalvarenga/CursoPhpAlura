@@ -22,4 +22,6 @@ $umaconta -> depositar(1000);
 $umaconta -> transferir(200, $outraconta);
 echo $umaconta -> exibirSaldo();
 
+echo $endereco->bairro;
+
 echo "\n" . \src\Alura\Banco\conta::recuperaNumerodecontas();

@@ -1,7 +1,7 @@
 <?php
 
 use src\Alura\Funcionarios\{Desenvolvedor, Diretor, Gerente};
-use src\Alura\Pessoa\{exibircpf, funcionario};
+use src\Alura\Pessoa\{endereco, exibircpf, funcionario};
 use src\Alura\Service\autenticador;
 use src\Alura\Service\controladorbonificacoes;
 
@@ -31,5 +31,6 @@ $autenticador->login($umfuncionario, 8888);
 $controlador->adicionaBonificacaoDe($umfuncionario);
 $controlador->adicionaBonificacaoDe($umafuncionaria);
 $controlador->adicionaBonificacaoDe($outrofuncionario);
+
 
 echo $controlador->recuperaTotalbonificacoes();
