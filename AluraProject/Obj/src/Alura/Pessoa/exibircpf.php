@@ -2,7 +2,7 @@
 
 namespace src\Alura\Pessoa;
 
-class exibircpf
+final class exibircpf
 {
     private $cpf;
 

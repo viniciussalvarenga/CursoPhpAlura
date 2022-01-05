@@ -2,7 +2,7 @@
 
 namespace src\Alura\Pessoa;
 
-class endereco
+final class endereco
 {
     private $rua;
     private $cidade;
