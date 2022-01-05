@@ -1,6 +1,8 @@
 <?php
 
-namespace src\Alura;
+namespace src\Alura\Banco;
+
+use src\Alura\Pessoa\pessoa;
 
 abstract class conta extends pessoa
 {

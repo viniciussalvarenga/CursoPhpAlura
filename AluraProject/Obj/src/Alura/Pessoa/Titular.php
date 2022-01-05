@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Alura;
+namespace src\Alura\Pessoa;
 
 class Titular extends pessoa
 {

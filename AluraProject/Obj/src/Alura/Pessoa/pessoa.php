@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Alura;
+namespace src\Alura\Pessoa;
 
-class pessoa
+abstract class pessoa
 {
     private exibircpf $cpf;
     private string $nome;

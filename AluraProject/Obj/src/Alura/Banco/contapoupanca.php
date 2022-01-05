@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Alura;
+namespace src\Alura\Banco;
 
 class contapoupanca extends conta
 {

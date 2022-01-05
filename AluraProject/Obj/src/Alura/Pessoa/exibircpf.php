@@ -1,12 +1,12 @@
 <?php
 
-namespace src\Alura;
+namespace src\Alura\Pessoa;
 
 class exibircpf
 {
-    private string $cpf;
+    private $cpf;
 
-    public function __construct(string $cpf)
+    public function __construct($cpf)
     {
         $this->cpf = $cpf;
     }
