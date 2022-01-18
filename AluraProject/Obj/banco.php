@@ -19,9 +19,15 @@ $outraconta = new contacorrente(
     'Lua');
 
 $umaconta -> depositar(1000);
-$umaconta -> transferir(200, $outraconta);
+
+try {
+    $umaconta -> sacar(1005);
+} catch (\src\Alura\Service\ThrowException $erro){
+    echo $erro->getMessage() . PHP_EOL;
+}
+
 echo $umaconta -> exibirSaldo();
 
-echo $endereco->bairro;
+echo $endereco->rua;
 
 echo "\n" . \src\Alura\Banco\conta::recuperaNumerodecontas();

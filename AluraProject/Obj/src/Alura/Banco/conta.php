@@ -3,6 +3,7 @@
 namespace src\Alura\Banco;
 
 use src\Alura\Pessoa\pessoa;
+use src\Alura\Service\ThrowException;
 
 abstract class conta extends pessoa
 {
@@ -26,7 +27,7 @@ abstract class conta extends pessoa
     public function sacar(float $quantidade)
     {
         if ($quantidade > $this->saldo) {
-            echo 'Saldo indisponível\n';
+            throw new ThrowException($quantidade, $this->saldo);
         }
 
         $this->saldo -= $quantidade;
