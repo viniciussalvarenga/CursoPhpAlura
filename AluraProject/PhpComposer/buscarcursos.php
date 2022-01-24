@@ -14,7 +14,7 @@ $client = new Client([
 $crawler = new Crawler();
 
 $buscador = new buscadordecursos($client, $crawler);
-$cursos = $buscador->buscar('excel');
+$cursos = $buscador->buscar('php');
 
 if ($cursos === []) {
     echo "Este curso não existe!";

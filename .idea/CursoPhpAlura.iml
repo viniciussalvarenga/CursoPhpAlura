@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/symfony/string/Resources/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/myclabs" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/phar-io" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/phpdocumentor" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/phpspec" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/sebastian" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/theseer" />
+      <excludeFolder url="file://$MODULE_DIR$/AluraProject/PhpComposer/vendor/webmozart" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
