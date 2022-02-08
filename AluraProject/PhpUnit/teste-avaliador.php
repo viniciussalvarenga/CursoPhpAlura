@@ -27,8 +27,12 @@ $maiorValor = $leiloeiro->getMaiorValor();
 $valorEsperado = 2500;
 
 if ($valorEsperado == $maiorValor) {
-    echo "TESTE OK";
+    echo "TESTE OK" , "\n";
 } else {
-    echo "TESTE FALHOU";
+    echo "TESTE FALHOU" . "\n";
+}
+
+foreach($leiloeiro->getMaioresLances() as $i => $value){
+   echo $leiloeiro->getMaioresLances()[$i];
 }
 
