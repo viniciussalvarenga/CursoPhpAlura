@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-</head>
+<?php include_once __DIR__ . '\html-inicio.php'?>
+
 <body>
 <div class="container">
     <div class="jumbotron">
         <h1><?= $titulo ?? $titulo = 'Novo curso'; ?> </h1>
     </div>
-    <form action="/salvar-curso" method="post">
+    <form action="/salvar-curso<?= isset($curso) ? '?id='. $curso->getId() : ''; ?>" method="post">
         <div class="form-group">
             <label for="descricao">Descrição</label>
             <input type="text" id="descricao" name="descricao" class="form-control"

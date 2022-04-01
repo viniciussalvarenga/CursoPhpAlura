@@ -5,7 +5,7 @@ namespace Alura\Cursos\Controller;
 use Alura\Cursos\Entity\Curso;
 use Alura\Cursos\Infra\EntityManagerCreator;
 
-class FormularioInsercao implements InterfaceControladorRequisicao
+class FormularioInsercao extends ControllerHtml implements InterfaceControladorRequisicao
 {
     private $repositorioDeCursos;
 
@@ -18,6 +18,9 @@ class FormularioInsercao implements InterfaceControladorRequisicao
     public function processarRequisicao() : void
     {
         $cursos = $this->repositorioDeCursos->findAll();
-        require_once __DIR__ . '/../../view/formulario-curso.php';
+        echo $this->renderizarHtml('formulario-curso.php', [
+            'cursos' => $cursos,
+            'titulo' => 'Novo curso'
+        ]);
     }
 }
